@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS | Belleza Total by Sueliyt & Edu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@200;400;500;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #080c0a;
+            --gold-leaf: #d4af37;
+            --cream: #f8f5f2;
+            --forest: #121d18;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: var(--cream);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .serif-lux { font-family: 'Cinzel', serif; }
+        .italic-lux { font-family: 'Lora', serif; font-style: italic; }
+
+        .gold-text {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 50%, #b38728 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Refinado */
+        .glass-nav {
+            background: rgba(8, 12, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Hero Image Parallax style */
+        .hero-bg {
+            background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+        url('Salon.jpeg');
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Botón WhatsApp Flotante 2026 */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #d4af37 0%, #b38728 100%);
+            color: var(--obsidian);
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.05) translateY(-5px);
+            background: white;
+        }
+
+        /* Card System */
+        .luxury-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px 5px;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .luxury-card:hover {
+            border-color: var(--gold-leaf);
+            background: rgba(212, 175, 55, 0.03);
+            transform: translateY(-10px);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--obsidian); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-leaf); }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-[100] glass-nav py-6">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="serif-lux text-3xl font-bold gold-text">SS</div>
+                <div class="h-8 w-[1px] bg-white/10 hidden sm:block"></div>
+                <div class="hidden sm:block">
+                    <p class="text-[8px] tracking-[0.4em] uppercase text-white/40">BELLEZA TOTAL</p>
+                    <p class="text-[9px] tracking-[0.2em] uppercase font-bold text-white/70">Sueliyt & Edu</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-10 text-[9px] uppercase tracking-[0.3em] font-bold text-white/50">
+                <a href="#inicio" class="hover:text-white transition">Inicio</a>
+                <a href="#fundadores" class="hover:text-white transition">Fundadores</a>
+                <a href="#servicios" class="hover:text-white transition">Rituales</a>
+                <a href="#espacio" class="hover:text-white transition">El Espacio</a>
+            </div>
+            <a href="https://wa.me/51966 275 013" class="bg-white/5 border border-white/10 px-8 py-3 rounded-full text-[9px] uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-all">
+                Reserva Online
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12">
+            <div class="reveal">
+                <span class="gold-text serif-lux text-xl tracking-[0.4em] block mb-6">ESTILISMO Y CUIDADO PERSONAL</span>
+                <h1 class="text-7xl md:text-9xl serif-lux leading-none mb-10">
+                    SS <br>
+<span class="italic-lux text-white/40 whitespace-nowrap">
+  Belleza Total
+</span>
+
+                </h1>
+                <p class="text-white/50 text-xl font-light leading-relaxed max-w-lg mb-12">
+                    La combinación perfecta entre el cuidado integral de la piel y uñas de <span class="text-white">Sueliyt</span> y el estilismo profesional de <span class="text-white">Edu</span>. Cortes, color, peinados y tratamientos diseñados para realzar tu belleza con técnica y experiencia.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="#servicios" class="bg-white text-black px-10 py-5 rounded-full text-[10px] uppercase font-extrabold tracking-widest hover:bg-[#d4af37] transition">Explorar Servicios</a>
+                    <a href="#fundadores" class="border border-white/20 px-10 py-5 rounded-full text-[10px] uppercase font-extrabold tracking-widest hover:bg-white/10 transition">Conoce al Dúo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundadores Section -->
+    <section id="fundadores" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="reveal relative">
+                <img src="peinado.jpeg" alt="Sueliyt y Edu" class="rounded-[60px] grayscale brightness-75 hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+                <div class="absolute -bottom-10 -right-10 glass-nav p-10 rounded-[40px] border border-[#d4af37]/20 hidden lg:block">
+                    <p class="serif-lux text-3xl gold-text mb-2">Desde 2016</p>
+                    <p class="text-[9px] uppercase tracking-[0.4em] text-white/40">Estilismo Profesional</p>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay: 0.3s">
+                <h2 class="text-5xl md:text-7xl serif-lux mb-8">El Alma <br> <span class="gold-text italic-lux">Detrás de SS</span></h2>
+                <div class="space-y-10">
+                    <div>
+                        <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-[0.4em] mb-4">Sueliyt — Especialista en Estética Integral</h4>
+                        <p class="text-white/40 font-light leading-relaxed">Especialista en cuidado de la piel, diseño de uñas y depilación con hilo. Su trabajo se enfoca en la estética facial y corporal, ofreciendo tratamientos personalizados que realzan la belleza natural de cada cliente.</p>
+                    </div>
+                    <div class="w-12 h-[1px] bg-white/10"></div>
+                    <div>
+                        <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-[0.4em] mb-4">Edu — Estilista Profesional</h4>
+                        <p class="text-white/40 font-light leading-relaxed">Estilista profesional especializado en cortes modernos, coloración, balayage, alisados y peinados. Edu combina técnica, precisión y tendencias actuales para crear estilos que se adaptan a la personalidad y forma de cada rostro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Services Section -->
+    <section id="servicios" class="py-32 px-6 bg-[#0a110e]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 reveal">
+                <span class="text-[#d4af37] text-[10px] font-bold uppercase tracking-[0.8em]">Nuestros Servicios</span>
+                <h2 class="text-6xl serif-lux mt-6 italic-lux">Servicios Profesionales</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Hair -->
+                <div class="luxury-card p-10 reveal" style="transition-delay: 0.1s">
+                    <img src="https://i.pinimg.com/736x/38/55/e0/3855e0761c8c0621425253d333ef070b.jpg" class="w-full h-64 object-cover rounded-[30px] mb-8 brightness-50">
+                    <h3 class="serif-lux text-3xl mb-4">Estilismo Profesional</h3>
+                    <ul class="text-white/30 text-sm space-y-3 mb-8 font-light">
+                        <li>• Cortes modernos para damas y caballeros</li>
+                        <li>• Coloración, balayage y mechas</li>
+                        <li>• Alisados y tratamientos capilares</li>
+                        <li>• Peinados para eventos y ocasiones especiales</li>
+                    </ul>
+                    <a href="https://wa.me/51966 275 013" class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#d4af37] flex items-center gap-3">Solicitar Cita <span class="w-10 h-[1px] bg-[#d4af37]"></span></a>
+                </div>
+
+                <!-- Skincare -->
+                <div class="luxury-card p-10 reveal" style="transition-delay: 0.3s">
+                    <img src="https://i.pinimg.com/1200x/b3/66/84/b3668413915265dad64e50bb844da1bb.jpg" class="w-full h-64 object-cover rounded-[30px] mb-8 brightness-50">
+                    <h3 class="serif-lux text-3xl mb-4">Estética Facial</h3>
+                    <ul class="text-white/30 text-sm space-y-3 mb-8 font-light">
+                        <li>• Limpieza facial profunda</li>
+                        <li>• Depilación con hilo (cejas y rostro)</li>
+                        <li>• Diseño y perfilado de cejas</li>
+                        <li>• Tratamientos hidratantes y revitalizantes</li>
+                    </ul>
+                    <a href="https://wa.me/51966 275 013" class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#d4af37] flex items-center gap-3">Solicitar Cita <span class="w-10 h-[1px] bg-[#d4af37]"></span></a>
+                </div>
+
+                <!-- Body -->
+                <div class="luxury-card p-10 reveal" style="transition-delay: 0.5s">
+                    <img src="https://i.pinimg.com/736x/90/73/7c/90737cdb82329092b7d9b9e6c9643352.jpg" class="w-full h-64 object-cover rounded-[30px] mb-8 brightness-50">
+                    <h3 class="serif-lux text-3xl mb-4">Uñas & Estética Corporal</h3>
+                    <ul class="text-white/30 text-sm space-y-3 mb-8 font-light">
+                        <li>• Manicure y pedicure profesional</li>
+                        <li>• Uñas acrílicas y gel</li>
+                        <li>• Spa de manos y pies</li>
+                        <li>• Depilación corporal</li>
+                    </ul>
+                    <a href="https://wa.me/51966 275 013" class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#d4af37] flex items-center gap-3">Solicitar Cita <span class="w-10 h-[1px] bg-[#d4af37]"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Espacio Gallery -->
+    <section id="espacio" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 md:col-span-8 reveal relative">
+
+    <img src="Salon.jpeg"
+         class="w-full h-[500px] object-cover rounded-[60px]"
+         alt="Recepción">
+
+   <div class="absolute inset-0 bg-gradient-to-t from-green-950/60 via-green-950/50 to-transparent rounded-[60px]"></div>
+
+
+</div>
+                <div class="col-span-12 md:col-span-4 reveal" style="transition-delay: 0.2s">
+                    <div class="bg-white/5 h-full rounded-[60px] flex flex-col justify-center p-12">
+                        <h3 class="serif-lux text-4xl mb-6">Tu Nuevo <span class="gold-text">Espacio de Belleza</span></h3>
+                        <p class="text-white/30 font-light text-sm mb-6">Un espacio moderno y acogedor diseñado para que cada cliente se sienta cómodo, relajado y en manos de verdaderos profesionales.</p>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
+                                <span class="text-[10px]">L</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
+                                <span class="text-[10px]">I</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
+                                <span class="text-[10px]">M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 px-6 border-y border-white/5">
+        <div class="max-w-5xl mx-auto text-center reveal">
+            <span class="gold-text text-[10px] font-bold uppercase tracking-[0.5em] mb-12 block italic-lux">"No es un salón, es una experiencia transformadora. La atención de Sueliyt y la visión de Edu son inigualables en Lima."</span>
+            <p class="serif-lux text-xl uppercase tracking-widest text-white/50">V. Almenara — Cliente SS</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 px-8 relative">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+            <div class="max-w-xs">
+                <div class="serif-lux text-4xl font-bold gold-text mb-6">SS</div>
+                <p class="text-white/30 text-xs leading-relaxed font-light">Tu espacio de confianza en estilismo y estética integral. Agenda tu cita y vive una experiencia profesional con resultados visibles.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#d4af37] mb-8">Horario</h5>
+                    <ul class="text-[10px] text-white/40 space-y-4 uppercase tracking-widest">
+                        <li>Lun — Dom</li>
+                        <li>09:00 — 22:00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#d4af37] mb-8">Ubicación</h5>
+                    <ul class="text-[10px] text-white/40 space-y-4 uppercase tracking-widest leading-loose">
+                        <li>San Juan de Lurigancho, Lima</li>
+                        <li>Jr. Tahuantinsuyo 595</li>
+                        <li>@ss_bellezatotal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/5 text-center">
+            <p class="text-[8px] uppercase tracking-[1em] text-white/10 font-bold">© 2026 SS Belleza Total. Crafted by Edu & Sueliyt.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51966 275 013" target="_blank" class="wa-float">
+        <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
+        </span>
+        Agenda por WhatsApp
+    </a>
+
+    <script>
+        // Reveal animation observer
+        const observerOptions = { threshold: 0.15 };
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Smooth nav background
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.padding = '1rem 0';
+                nav.style.background = 'rgba(8, 12, 10, 0.98)';
+            } else {
+                nav.style.padding = '1.5rem 0';
+                nav.style.background = 'rgba(8, 12, 10, 0.8)';
+            }
+        });
+    </script>
+</body>
+</html>
